@@ -55,14 +55,4 @@ namespace Cash.Model
             }
         }
     }
-
-    public class Accounts : ObservableCollection<Account>
-    {
-        public Accounts()
-        {
-            Add(new Account(AccountType.Active, "Активы"));
-            Add(new Account(AccountType.Passive, "Расходы"));
-        }
-    }  
-
 }

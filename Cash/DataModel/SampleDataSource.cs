@@ -89,9 +89,15 @@ namespace Cash.Data
         private ObservableCollection<SampleDataGroup> _groups = new ObservableCollection<SampleDataGroup>();
         private AccountTags _accountTags = new AccountTags();
         private Currencies _currencies = new Currencies();
+        private List<Model.Account> imported2 = new List<Model.Account>();
         public ObservableCollection<SampleDataGroup> Groups
         {
             get { return this._groups; }
+        }
+
+        public List<Model.Account> Imported2
+        {
+            get { return this.imported2;  }
         }
 
         public List<AccountTag> AccountTags

@@ -13,11 +13,10 @@
 
     <Page.Resources>
 
-        <CollectionViewSource x:Key="ItemsGroupedByGroup" 
+        <CollectionViewSource x:Key="SubAccounts" 
 		        IsSourceGrouped="True" 
 		        ItemsPath="SubAccounts" 
 		        Source="{Binding Imported2}"/>
-
         <conv:EnumToString x:Key="EnumToString"/>
 
         <DataTemplate x:Key="HubSectionHeaderTemplate">
@@ -94,7 +93,7 @@
                 <DataTemplate>
                     <ListView 
                         x:Name="GroupedListView"
-				        ItemsSource="{Binding Source={StaticResource ItemsGroupedByGroup}}" 
+				        ItemsSource="{Binding Source={StaticResource SubAccounts}}" 
                         ItemClick="GroupedListView_ItemClick" 
                         IsItemClickEnabled ="True"
                         SelectionMode="None"

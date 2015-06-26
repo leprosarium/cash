@@ -1,4 +1,4 @@
-{"AccountTags": [
+﻿{"AccountTags": [
 	{
 		"Name": "Bank",
 		"Type": "0"
@@ -12,15 +12,69 @@
 		"Type": "0"
 	}
 ],
+"Imported2": [
+	{
+		"Name": "Доход",
+		"Commodity": {
+			"ISO": "RUB"
+		},
+		"Type":"0",
+		"SubAccounts":[		
+			{
+				"Name": "Подарки",
+				"Commodity": {
+					"ISO": "RUB"
+				},
+				"Type":"0",
+				"SubAccounts":[]	
+			},
+			{
+				"Name": "Зарплата",
+				"Commodity": {
+					"ISO": "RUB"
+				},
+				"Type":"0",
+				"SubAccounts":[]	
+			}
+		]
+	},
+	{
+		"Name": "Bank",
+		"Commodity": {
+			"ISO": "RUB"
+		},
+		"Type":"0",
+		"SubAccounts":[]	
+	},
+	{
+		"Name": "Income",
+		"Commodity": {
+			"ISO": "RUB"
+		},
+		"Type":"1",
+		"SubAccounts":[]	
+	},
+	{
+		"Name": "Expense",
+		"Commodity": {
+			"ISO": "USD"
+		},
+		"Type":"0",
+		"SubAccounts":[]	
+	}
+],
 "Currencies": [
 	{
-		"ISO": "RUB"
+		"ISO": "RUB",
+		"Name": "Ruble"
 	},
 	{
-		"ISO": "USD"
+		"ISO": "USD",
+		"Name": "Dollar"
 	},
 	{
-		"ISO": "EUR"
+		"ISO": "EUR",
+		"Name": "Euro"
 	}
 ],
 "Groups":[

@@ -59,7 +59,7 @@ namespace XmlReaderExtensions
 namespace Cash
 {
     using XmlReaderExtensions;
-    using Model.Import2;
+    using Model.Import;
     using Windows.Storage.Pickers;
     using Windows.ApplicationModel.Activation;
 
@@ -222,17 +222,8 @@ namespace Cash
 
                 if (books.Any())
                 {
-                    //ObservableCollection<string> imported = (ObservableCollection<string>)this.defaultViewModel["Imported"];
-                    //imported.Add(string.Format("Accounts: {0}", books[0].Accounts.Count));
-                    //imported.Add(string.Format("Transactions: {0}", books[0].Transactions.Count));
-                    //foreach (var acc in books[0].Accounts)
-                    //    imported.Add(string.Format("{0} {1} {2} {3} {4}", acc.Name, acc.Type, acc.ID, acc.Comm.Space, acc.Comm.ID));
-
                     Cash.Model.Account root = GnuCash.MakeAccountTree(books[0].Accounts);
                     List<string> flat = new List<string>();
-                    string[] ll = new string[] { "1" };
-                    string ss = ll.ToString();
-                    flat.Add(ss);
                     root.FlatList("", ";", ref flat);
                     this.defaultViewModel["Imported"] = new ObservableCollection<string>(flat);
                     this.defaultViewModel["Imported2"] = root.SubAccounts;
